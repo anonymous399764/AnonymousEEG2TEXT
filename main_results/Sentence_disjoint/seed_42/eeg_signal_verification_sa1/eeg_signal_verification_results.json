@@ -1,0 +1,58 @@
+{
+  "checkpoint": "C:\\Users\\LOQ\\Desktop\\AnonymousEEGtoText\\main results\\Sentence_disjoint\\seed_42\\best.pt",
+  "checkpoint_epoch": 43,
+  "self_attn_scale": 1.0,
+  "decoding": {
+    "mode": "greedy",
+    "num_beams": 1,
+    "teacher_forcing": false,
+    "eeg_prior_alpha": 0.0,
+    "repetition_penalty": 1.0,
+    "no_repeat_ngram_size": 3
+  },
+  "dataset": {
+    "data_dir": "C:\\Users\\LOQ\\Desktop\\decoders\\decoder_ablation_hpo03\\data",
+    "normalization_stats": "C:\\Users\\LOQ\\Desktop\\AnonymousEEGtoText\\ablation results\\sensitivity_ablation\\sa_scale_1.0\\eeg_norm_stats.npz",
+    "split_seed": 42,
+    "n_eeg_trials": 1316,
+    "n_unique_test_sentences": 105
+  },
+  "controls": {
+    "shuffled_eeg": "batchwise torch.randperm with seed 42; EEG masks are permuted identically",
+    "gaussian_noise": "N(0, 1) in normalized EEG space, NumPy RandomState(42)",
+    "zero_eeg": "all normalized EEG values set to zero; original EEG mask retained"
+  },
+  "metrics": {
+    "real_eeg": {
+      "bleu1": 0.21206006441898995,
+      "bleu2": 0.07304172330631489,
+      "bleu3": 0.030160987361457465,
+      "bleu4": 0.01575498875957139,
+      "rougeL": 0.15212958294262102
+    },
+    "shuffled_eeg": {
+      "bleu1": 0.15676832983121655,
+      "bleu2": 0.04207709251250124,
+      "bleu3": 0.012976745172011995,
+      "bleu4": 0.005304083367982834,
+      "rougeL": 0.10358552634211207
+    },
+    "gaussian_noise": {
+      "bleu1": 0.10938690893570316,
+      "bleu2": 0.033000039529495935,
+      "bleu3": 0.008294745310627705,
+      "bleu4": 0.0020742900116463483,
+      "rougeL": 0.09576201831752412
+    },
+    "zero_eeg": {
+      "bleu1": 0.10182322603179188,
+      "bleu2": 0.011289376526043931,
+      "bleu3": 0.0012599603799305548,
+      "bleu4": 0.0003612388443708962,
+      "rougeL": 0.08220487096147307
+    }
+  },
+  "real_shuffled_exact_output_matches": 34,
+  "real_shuffled_exact_output_match_rate": 0.025835866261398176,
+  "decoded_sentences_csv": "C:\\Users\\LOQ\\Desktop\\AnonymousEEGtoText\\main results\\Sentence_disjoint\\seed_42\\eeg_signal_verification_sa1\\real_vs_shuffled_decoded_sentences.csv"
+}

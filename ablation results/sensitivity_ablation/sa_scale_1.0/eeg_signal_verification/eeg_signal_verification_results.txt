@@ -1,0 +1,39 @@
+EEG SIGNAL-VERIFICATION RESULTS - NO SELF-ATTENTION DAMPENING ABLATION
+===========================================================================
+
+Checkpoint: ablation results/sensitivity_ablation/sa_scale_1.0/best.pt
+Checkpoint epoch: 48
+Self-attention scale (alpha_sa): 1.0
+
+Evaluation protocol
+-------------------
+Split: sentence-disjoint, seed 42
+Held-out partition: 105 unique sentences / 1,316 EEG trials
+Decoding: greedy (num_beams=1), no teacher forcing
+EEG vocabulary prior alpha: 0.0
+Repetition penalty: 1.3
+No-repeat n-gram size: 3
+
+Controls
+--------
+Shuffled EEG: batchwise torch.randperm with seed 42; EEG masks permuted identically.
+Gaussian noise: N(0, 1) in normalized EEG space; NumPy RandomState(42).
+Zero EEG: all normalized EEG values set to zero; original EEG masks retained.
+
+METRICS
+-------
+Condition          BLEU-1    BLEU-2    BLEU-3    BLEU-4    ROUGE-L
+-----------------------------------------------------------------------
+Real EEG           0.2030    0.0602    0.0223    0.0100    0.1417
+Shuffled EEG       0.1598    0.0380    0.0111    0.0045    0.1048
+Gaussian noise     0.1215    0.0283    0.0066    0.0018    0.0942
+Zero EEG           0.0830    0.0089    0.0011    0.0003    0.0784
+
+REAL-VS-SHUFFLED OUTPUT AGREEMENT
+----------------------------------
+Exactly identical decoded outputs: 35 / 1,316 EEG trials (2.66%)
+
+Related output
+--------------
+Decoded real-EEG and shuffled-EEG outputs:
+real_vs_shuffled_decoded_sentences.csv

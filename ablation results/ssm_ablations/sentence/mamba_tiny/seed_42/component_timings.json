@@ -1,0 +1,38 @@
+{
+  "human_readable": {
+    "checkpoint_reload_seconds": "0s",
+    "dataloader_setup_seconds": "0s",
+    "model_and_encoder_initialization_seconds": "1s",
+    "phase1_training_seconds": "28m 40s",
+    "phase1_validation_seconds": "12m 36s",
+    "phase2_training_seconds": "1h 31m 59s",
+    "phase2_validation_seconds": "15m 51s",
+    "primary_test_evaluation_seconds": "15s",
+    "sanity_check_seconds": "1s",
+    "test_evaluation_seconds": "15s",
+    "total_run_seconds": "2h 30m 37s",
+    "trainer_initialization_seconds": "0s",
+    "training_loop_seconds": "2h 30m 20s",
+    "training_wall_seconds": "2h 30m 20s"
+  },
+  "seconds": {
+    "checkpoint_reload_seconds": 0.30282099999931233,
+    "dataloader_setup_seconds": 0.00010420000035082921,
+    "model_and_encoder_initialization_seconds": 1.0199792000003072,
+    "phase1_training_epochs": 30,
+    "phase1_training_seconds": 1720.381004333496,
+    "phase1_validation_events": 30,
+    "phase1_validation_seconds": 756.4188314000021,
+    "phase2_training_epochs": 70,
+    "phase2_training_seconds": 5518.954880475998,
+    "phase2_validation_events": 70,
+    "phase2_validation_seconds": 951.0465375000022,
+    "primary_test_evaluation_seconds": 14.70966849999968,
+    "sanity_check_seconds": 0.8277430999996795,
+    "test_evaluation_seconds": 14.70967009999913,
+    "total_run_seconds": 9036.5091713,
+    "trainer_initialization_seconds": 0.23591440000018338,
+    "training_loop_seconds": 9020.2366408,
+    "training_wall_seconds": 9020.2373651
+  }
+}

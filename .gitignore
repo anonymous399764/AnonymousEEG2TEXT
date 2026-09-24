@@ -1,0 +1,23 @@
+
+__pycache__/
+*.pyc
+
+venv/
+dataset/
+
+
+# Model checkpoint weights 
+*.pt
+*.pth
+
+# Training logs
+runs/
+*.log
+events.out.tfevents.*
+
+# IDE
+.vscode/
+.idea/
+
+
+

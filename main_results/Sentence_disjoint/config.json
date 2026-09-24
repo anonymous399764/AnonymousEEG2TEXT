@@ -1,0 +1,20 @@
+{
+  "name": "bleu1_selector_strong_eeg",
+  "notes": "Direct BLEU-1 selection with stronger EEG reliance and gentler augmentation.",
+  "select_metric": "bleu1",
+  "hybrid_bert_weight": 0.5,
+  "hybrid_bleu_scale": 24.0,
+  "overrides": {
+    "phase1_epochs": 30,
+    "phase2_epochs": 70,
+    "phase1_lr": 8e-05,
+    "phase2_lr": 2.5e-05,
+    "lambda_contrastive": 3.0,
+    "lambda_attn_entropy": 0.15,
+    "word_dropout_start": 0.35,
+    "word_dropout_end": 0.85,
+    "eeg_prior_lambda": 1.2,
+    "eeg_noise_std": 0.05,
+    "eeg_channel_drop": 0.02
+  }
+}

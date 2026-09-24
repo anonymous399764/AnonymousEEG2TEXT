@@ -1,0 +1,13 @@
+{
+  "best_validation_checkpoint": {
+    "path": "checkpoints/best.pt",
+    "phase": 2,
+    "selected_epoch": 34,
+    "selection_metric": "validation greedy BLEU-1",
+    "validation_metric": 0.24443759841172047
+  },
+  "last_resume_checkpoint": {
+    "path": "checkpoints/last.pt"
+  },
+  "normalization_statistics": "checkpoints/eeg_norm_stats.npz"
+}

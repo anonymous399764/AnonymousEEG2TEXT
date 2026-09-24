@@ -1,0 +1,58 @@
+{
+  "checkpoint": "C:\\Users\\LOQ\\Desktop\\AnonymousEEGtoText\\ablation results\\sensitivity_ablation\\sa_scale_1.0\\best.pt",
+  "checkpoint_epoch": 48,
+  "self_attn_scale": 1.0,
+  "decoding": {
+    "mode": "greedy",
+    "num_beams": 1,
+    "teacher_forcing": false,
+    "eeg_prior_alpha": 0.0,
+    "repetition_penalty": 1.3,
+    "no_repeat_ngram_size": 3
+  },
+  "dataset": {
+    "data_dir": "C:\\Users\\LOQ\\Desktop\\decoders\\decoder_ablation_hpo03\\data",
+    "normalization_stats": "C:\\Users\\LOQ\\Desktop\\AnonymousEEGtoText\\ablation results\\sensitivity_ablation\\sa_scale_1.0\\eeg_norm_stats.npz",
+    "split_seed": 42,
+    "n_eeg_trials": 1316,
+    "n_unique_test_sentences": 105
+  },
+  "controls": {
+    "shuffled_eeg": "batchwise torch.randperm with seed 42; EEG masks are permuted identically",
+    "gaussian_noise": "N(0, 1) in normalized EEG space, NumPy RandomState(42)",
+    "zero_eeg": "all normalized EEG values set to zero; original EEG mask retained"
+  },
+  "metrics": {
+    "real_eeg": {
+      "bleu1": 0.20304604801256523,
+      "bleu2": 0.0601910078914503,
+      "bleu3": 0.022278401507038855,
+      "bleu4": 0.010003065934215826,
+      "rougeL": 0.14165003733694487
+    },
+    "shuffled_eeg": {
+      "bleu1": 0.15980849084915077,
+      "bleu2": 0.037965041199717435,
+      "bleu3": 0.011144011240955022,
+      "bleu4": 0.004474955924393516,
+      "rougeL": 0.10476374971694535
+    },
+    "gaussian_noise": {
+      "bleu1": 0.12147696370467014,
+      "bleu2": 0.02834314661554092,
+      "bleu3": 0.00661757074959764,
+      "bleu4": 0.0017654046000382798,
+      "rougeL": 0.09416046573370349
+    },
+    "zero_eeg": {
+      "bleu1": 0.08303711838245798,
+      "bleu2": 0.008929959763192408,
+      "bleu3": 0.0010684158727408985,
+      "bleu4": 0.0003175621564729164,
+      "rougeL": 0.07835022692793411
+    }
+  },
+  "real_shuffled_exact_output_matches": 35,
+  "real_shuffled_exact_output_match_rate": 0.026595744680851064,
+  "decoded_sentences_csv": "C:\\Users\\LOQ\\Desktop\\AnonymousEEGtoText\\ablation results\\sensitivity_ablation\\sa_scale_1.0\\eeg_signal_verification\\real_vs_shuffled_decoded_sentences.csv"
+}

@@ -1,0 +1,12 @@
+{
+  "checkpoint_selection_metric": "validation greedy BLEU-1",
+  "encoder": "dss",
+  "greedy_bleu1": 0.19305612813701167,
+  "greedy_bleu2": 0.057383241040580686,
+  "greedy_bleu3": 0.02146485648521604,
+  "greedy_bleu4": 0.010178320907951652,
+  "greedy_rouge1": 0.1831061214600679,
+  "greedy_rouge1_precision": 0.20484487659233638,
+  "seed": 42,
+  "split_mode": "sentence"
+}
