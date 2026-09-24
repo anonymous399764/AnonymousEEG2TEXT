@@ -202,12 +202,6 @@ ablation results/             # Checked-in ablation artifacts
 Mat to Pickle file/           # Dataset-format conversion utilities
 ```
 
-## Notes for reviewers
-
-- Data, checkpoints, cached model downloads, and local training outputs are intentionally excluded from version control. Result summaries and prediction artifacts needed to audit reported numbers are retained where licensing permits.
-- BERTScore can vary slightly across package/model versions and hardware. Record the environment and report seed aggregates rather than a single favorable run.
-- The primary result is sentence-disjoint, free greedy decoding. Do not compare it to teacher-forced scores or to results generated under a split with overlapping sentences.
-
 ## Acknowledgements
 
 This implementation builds on ZuCo, S4D, BART, and contrastive-learning research. Please cite the original dataset and method papers when using the data or underlying components.
